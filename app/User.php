@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $guarded = [
-        'id',
+        'id', 'type'
     ];
 
     /**
@@ -29,4 +29,8 @@ class User extends Authenticatable
     ];
 
     protected $table = 'users';
+
+    public function fullname(){
+        return $this->fname . ' '. $this->mname . ' ' . $this->lname;
+    }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\Client\Providers;
+namespace App\Modules\Task\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
@@ -14,7 +14,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'App\Modules\Client\Http\Controllers';
+    protected $namespace = 'App\Modules\Task\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -35,7 +35,6 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function map()
     {
-
         $this->mapApiRoutes();
 
         //
@@ -55,7 +54,7 @@ class RouteServiceProvider extends ServiceProvider
             'namespace'  => $this->namespace,
             'prefix'     => '',
         ], function ($router) {
-            require module_path('client', 'Routes/api.php', 'app');
+            require module_path('task', 'Routes/api.php', 'app');
         });
     }
 }

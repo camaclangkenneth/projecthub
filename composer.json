@@ -13,6 +13,7 @@
         "damnyan/cmn": "^4.1",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
+        "laravel/passport": "^7.1",
         "laravel/tinker": "^1.0"
     },
     "require-dev": {

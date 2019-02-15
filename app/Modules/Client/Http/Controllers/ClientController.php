@@ -10,13 +10,6 @@ use App\Modules\Client\Models\Client;
 
 class ClientController extends Controller
 {
-    public function showAllClients(){
-        $clients = Client::all();
-        return response()->json([
-            'success' => true,
-            'data' => $client,
-        ]);
-    }
 
     public function index(){
         $clients = Client::all();

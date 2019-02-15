@@ -13,8 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::group(['prefix' => 'clients', 'middleware' => 'hr.admin'], function () {
-    Route::get('/', 'ClientController@showAllClients');
+Route::group(['prefix' => 'clients'], function () {
+    Route::get('/', 'ClientController@index');
     Route::post('/', 'ClientController@store');
     Route::get('/{client}', 'ClientController@show');
     Route::put('/{client}', 'ClientController@update');

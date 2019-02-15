@@ -2,4 +2,5 @@
 
 use Damnyan\Cmn\Services\Route;
 
-new Route('project');
+new Route('task');
+

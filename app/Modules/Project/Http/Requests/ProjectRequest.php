@@ -23,11 +23,34 @@ class ProjectRequest extends ApiRequest
      */
     public function rules()
     {
-        return [
-            'title' => 'required',
-            'description' => 'required',
-            'status' => 'required',
-            'deadline' => 'required',
-        ];
+        switch ($this->method()) {
+            case 'POST':
+            {
+                return [
+                    'title' => 'required',
+                    'description' => 'required',
+                    'status' => 'required',
+                    'deadline' => 'required',
+                ];
+            }
+            case 'PUT':
+            {
+                return [
+                    'title' => 'required',
+                    'description' => 'required',
+                    'status' => 'required',
+                    'deadline' => 'required',
+                ];
+            }
+            case 'PATCH':
+            {
+                return [
+                    'manager' => 'required',
+                    'client' => 'required',
+                ];
+            }
+            default: break;
+        }
+        
     }
 }

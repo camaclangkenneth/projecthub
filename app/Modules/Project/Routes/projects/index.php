@@ -1,7 +1,7 @@
 <?php
 
 Route::group(
-    ['middleware' => []], function(){
+    ['middleware' => ['jwt.auth','admin']], function(){
         Route::get('/', 'ProjectController@index');
         Route::post('/', 'ProjectController@store');
     }

@@ -63,8 +63,11 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'json' => \App\Http\Middleware\JsonMiddleware::class,
 
+        'jwt.auth' => \Tymon\JWTAuth\Middleware\GetUserFromToken::class,
+        'jwt.refresh' => \Tymon\JWTAuth\Middleware\RefreshToken::class,
+
         'admin' => \App\Http\Middleware\AdminMiddleware::class,
-        'hr.admin' => \App\Http\Middleware\HRAdminMiddleware::class,
+        'hr' => \App\Http\Middleware\HRAdminMiddleware::class,
         'employee' => \App\Http\Middleware\EmployeeMiddleware::class,
     ];
 

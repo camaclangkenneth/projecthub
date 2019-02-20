@@ -27,20 +27,20 @@ class ClientRequest extends FormRequest
             case 'POST':
             {
                 return [
-                    'name' => 'required',
-                    'contact1' => 'required',
-                    'contactperson1' => 'required',
-                    'address' => 'required',
+                    'name' => 'required|string|max:64',
+                    'contact1' => 'required|number|min:11|max:12',
+                    'contactperson1' => 'required|string|min:3|max:50',
+                    'address' => 'required|string|min:10|max:255',
                 ];
             }
             case 'PUT':
             case 'PATCH':
             {
                 return [
-                    'name' => 'required',
-                    'contact1' => 'required',
-                    'contactperson1' => 'required',
-                    'address' => 'required',
+                    'name' => 'required|string|max:64',
+                    'contact1' => 'required|number|min:10|max:12',
+                    'contactperson1' => 'required|string|min:3|max:50',
+                    'address' => 'required|string|min:10|max:255',
                 ];
             }
             default: break;

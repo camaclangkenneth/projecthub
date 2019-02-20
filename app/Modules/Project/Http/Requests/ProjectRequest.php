@@ -24,10 +24,10 @@ class ProjectRequest extends ApiRequest
     public function rules()
     {
         return [
-            'title' => 'required',
-            'description' => 'required',
-            'status' => 'required',
-            'deadline' => 'required',
+            'title' => 'required|string|max:64',
+            'description' => 'required|string|max:255',
+            'status' => 'required|string|max:64',
+            'deadline' => 'required|string|max:64',
         ];
     }
 }
